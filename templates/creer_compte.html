@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <title>creer compte</title>  
+
+    </head>
+    <body>
+        <header>
+        </header>
+        <div style="width: 60%;margin-left:19%">
+            <form action="" method="POST">
+                {% csrf_token %}    
+                <h1>Creer un compte</h1>
+                <label for="">Nom</label><br>
+                <input type="text" name="nom" class="form-control"><br>
+                <label for="">Post-Nom</label><br>
+                <input type="text" name="postnom" class="form-control"><br>
+                <label for="">Prenom</label><br>
+                <input type="text" name="prenom" class="form-control"><br>
+                <label for="">Sexe</label><br>
+                <select name="sexe" id="" class="form-control">
+                    <option value="m">Masculin</option>
+                    <option value="f">Feminin</option>
+                </select>
+                <br>
+                <label for="">Profession</label><br>
+                <select name="profession" id="" class="form-control">
+                    <option value="IT">Informaticien</option>
+                    <option value="AC">Accountant</option>
+                    <option value="CA">Cashier</option>
+                    <option value="CL">Cleaner</option>
+                    <option value="CC">CustmerCare</option>
+                </select>
+                <br>
+                <label for="">Date de naissance</label><br>
+                <input type="date" name="date_naissance" class="form-control"><br>
+                <label for="">Lieu de naissance</label><br>
+                <input type="text" name="lieu_naissance" class="form-control"><br>
+                <label for="">Role</label><br>
+                <select name="role" id="" class="form-control">
+                    <option value="Ed">Editeur</option>
+                    <option value="Co">Commentataire</option>
+                </select>
+                <br>
+                <label for="">Email</label><br>
+                <input type="text" name="email" class="form-control"><br>
+                <label for="">Username</label><br>
+                <input type="text" name="username" class="form-control"><br>
+                <label for="">Mot de passe</label><br>
+                <input type="password" name="mot_de_passe" class="form-control"><br>
+                <input type="submit" value="Creer compte" class="btn btn-primary">
+                <br><br>
+                <a href="{% url 'se_connecter' %}">Se connecter</a>
+                <br>
+            </form>
+        </div>
+    </body>
+
+</html>
